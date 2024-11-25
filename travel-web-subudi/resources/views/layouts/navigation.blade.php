@@ -15,6 +15,13 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    @role('customer')
+                    <x-nav-link :href="route('dashboard.bookings')" :active="request()->routeIs('dashboard.bookings')">
+                        {{ __('My Bookings') }}
+                    </x-nav-link>
+                    @endrole
+
+                    @role('super_admin')
                     <x-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories.index')">
                         {{ __('Categories') }}
                     </x-nav-link>
@@ -24,6 +31,10 @@
                     <x-nav-link :href="route('admin.package_tours.index')" :active="request()->routeIs('admin.package_tours.index')">
                         {{ __('Package Tours') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('admin.package_bookings.index')" :active="request()->routeIs('admin.package_bookings.index')">
+                        {{ __('Package Bookings') }}
+                    </x-nav-link>
+                    @endrole
                 </div>
             </div>
 
@@ -80,6 +91,27 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
         </div>
+
+        @role('customer')
+        <x-responsive-nav-link :href="route('dashboard.bookings')" :active="request()->routeIs('dashboard.bookings')">
+            {{ __('My Bookings') }}
+        </x-responsive-nav-link>
+        @endrole
+
+        @role('super_admin')
+        <x-responsive-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories.index')">
+            {{ __('Categories') }}
+        </x-responsive-nav-link>
+        <x-responsive-nav-link :href="route('admin.package_banks.index')" :active="request()->routeIs('admin.banks.index')">
+            {{ __('Banks') }}
+        </x-responsive-nav-link>
+        <x-responsive-nav-link :href="route('admin.package_tours.index')" :active="request()->routeIs('admin.package_tours.index')">
+            {{ __('Package Tours') }}
+        </x-responsive-nav-link>
+        <x-responsive-nav-link :href="route('admin.package_bookings.index')" :active="request()->routeIs('admin.package_bookings.index')">
+            {{ __('Package Bookings') }}
+        </x-responsive-nav-link>
+        @endrole
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
