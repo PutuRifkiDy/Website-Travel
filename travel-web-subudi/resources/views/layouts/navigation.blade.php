@@ -1,42 +1,44 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 font-poppins">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
+        <div class="flex justify-between gap-8 items-center py-8">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
+                <div>
+                    <div class="shrink-0 flex items-center">
+                        <a href="{{route('front.index')}}" class="text-pink-gradient text-[32px] md:text-[39.4px] leading-[31.56px] font-bold font-poppins">
+                            SubudiTour
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                    @role('customer')
-                    <x-nav-link :href="route('dashboard.bookings')" :active="request()->routeIs('dashboard.bookings')">
-                        {{ __('My Bookings') }}
-                    </x-nav-link>
-                    @endrole
-
-                    @role('super_admin')
-                    <x-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories.index')">
-                        {{ __('Categories') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('admin.package_banks.index')" :active="request()->routeIs('admin.banks.index')">
-                        {{ __('Banks') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('admin.package_tours.index')" :active="request()->routeIs('admin.package_tours.index')">
-                        {{ __('Package Tours') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('admin.package_bookings.index')" :active="request()->routeIs('admin.package_bookings.index')">
-                        {{ __('Package Bookings') }}
-                    </x-nav-link>
-                    @endrole
+                <div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex font-medium">
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-nav-link>
+                        @role('customer')
+                        <x-nav-link :href="route('dashboard.bookings')" :active="request()->routeIs('dashboard.bookings')">
+                            {{ __('My Bookings') }}
+                        </x-nav-link>
+                        @endrole
+    
+                        @role('super_admin')
+                        <x-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories.index')">
+                            {{ __('Categories') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('admin.package_banks.index')" :active="request()->routeIs('admin.banks.index')">
+                            {{ __('Banks') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('admin.package_tours.index')" :active="request()->routeIs('admin.package_tours.index')">
+                            {{ __('Package Tours') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('admin.package_bookings.index')" :active="request()->routeIs('admin.package_bookings.index')">
+                            {{ __('Package Bookings') }}
+                        </x-nav-link>
+                        @endrole
+                    </div>
                 </div>
-            </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">

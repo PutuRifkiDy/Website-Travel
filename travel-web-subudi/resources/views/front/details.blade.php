@@ -1,17 +1,17 @@
 @extends('front.layouts.app')
 @section('content')
-    <section id="content" class="max-w-[640px] w-full mx-auto bg-[#F9F2EF] min-h-screen flex flex-col gap-8 pb-[120px]">
+    <section id="content" class="md:px-24 px-6 w-full mx-auto bg-[#F9F2EF] min-h-screen flex flex-col gap-8 pb-[120px]">
         <nav class="mt-8 px-4 w-full flex items-center justify-between">
             <a href="{{ route('front.index') }}">
                 <img src="{{ asset('assets/icons/back.png') }}" alt="back">
             </a>
-            <p class="text-center m-auto font-semibold">Details</p>
+            <p class="text-center m-auto font-semibold text-[36px] text-black/70">Details</p>
             <a href="">
                 <img src="{{ asset('assets/icons/more-dots.svg') }}" alt="more">
             </a>
         </nav>
-        <div id="image-details" class="px-4 flex flex-col gap-3">
-            <div class="w-full h-[345px] flex shrink-0 rounded-xl overflow-hidden">
+        <div id="image-details" class="px-4 flex flex-col gap-3 justify-center items-center">
+            <div class="max-w-[640px] w-full h-[345px] flex shrink-0 rounded-xl overflow-hidden">
                 <img id="image-thumbnail" src="{{ Storage::url($packageTour->thumbnail) }}"
                     class="w-full h-full object-cover object-center" alt="thumbnail">
             </div>
@@ -38,13 +38,13 @@
             <h1 class="font-semibold">{{ $packageTour->name }}</h1>
             <div class="flex justify-between gap-2">
                 <div class="flex items-center gap-2">
-                    <div class="w-6 h-6 flex items-center shrink-0">
-                        <img src="{{ asset('assets/icons/location-map.svg') }}" class="w-full h-full object-contain"
+                    <div class="flex items-center md:max-w-[350px] w-full h-auto rounded-[29.59px] overflow-hidden">
+                        <img src="{{ asset('assets/icons/location-map.svg') }}" class="object-contain h-full md:w-auto w-full hover:scale-125 transition-all duration-300"
                             alt="icon">
                     </div>
                     <div class="flex flex-col gap-1">
                         <p class="text-sm leading-[22px] tracking-[0.35px] text-darkGrey">Location</p>
-                        <p class="font-semibold text-sm tracking-035">{{ $packageTour->location }}</p>
+                        <p class="font-semibold text-sm tracking-[0.35px]">{{ $packageTour->location }}</p>
                     </div>
                 </div>
                 <div class="flex flex-col gap-1">
@@ -155,7 +155,7 @@
             </a>
         </div>
         <div
-            class="navigation-bar fixed bottom-0 z-50 max-w-[640px] w-full h-[85px] bg-white rounded-t-[25px] flex items-center justify-between px-6">
+            class="fixed left-0 right-0 navigation-bar bottom-0 w-full h-[85px] bg-white rounded-t-[25px] flex items-center justify-between md:px-24 px-6">
             <div class="flex flex-col justify-center gap-1">
                 <p class="text-darkGrey text-sm tracking-035 leading-[22px]">Total Price</p>
                 <p class="text-blue font-semibold text-lg leading-[26px] tracking-[0.6px]">Rp

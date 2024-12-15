@@ -15,7 +15,7 @@
             <div class="w-[calc(100%-26px)] rounded-[20px] overflow-hidden relative">
                 <img src="assets/backgrounds/Asset.png" class="w-full h-full object-contain" alt="background">
             </div>
-            <form method="POST" action="{{route('login')}}"
+            <form method="POST" action="{{ route('login') }}"
                 class="flex flex-col w-full bg-white p-[24px_16px] gap-8 rounded-[22px] items-center">
                 @csrf
                 <div class="flex flex-col gap-1 text-center">
@@ -52,8 +52,9 @@
                 <button type="submit"
                     class="bg-[#4D73FF] p-[16px_24px] w-full max-w-[311px] rounded-[10px] text-center text-white font-semibold hover:bg-[#06C755] transition-all duration-300">Sign
                     In</button>
-                <p class="text-center text-sm tracking-035 text-darkGrey">Don’t have account? <a href="{{route('register')}}"
-                        class="text-[#4D73FF] font-semibold tracking-[0.6px]">Sign Up</a></p>
+                <p class="text-center text-sm tracking-035 text-darkGrey">Don’t have account? <a
+                        href="{{ route('register') }}" class="text-[#4D73FF] font-semibold tracking-[0.6px]">Sign Up</a>
+                </p>
             </form>
         </div>
     </section>

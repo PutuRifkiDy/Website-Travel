@@ -1,11 +1,11 @@
 @extends('front.layouts.app')
 @section('content')
-    <section id="content" class="max-w-[640px] w-full mx-auto bg-[#F9F2EF] min-h-screen flex flex-col gap-8 pb-[120px]">
+    <section id="content" class="w-full md:px-24 px-6 mx-auto bg-[#F9F2EF] min-h-screen flex flex-col gap-8 pb-[120px]">
         <nav class="mt-8 px-4 w-full flex items-center justify-between">
             <a href="checkout.html">
                 <img src="{{asset('assets/icons/back.png')}}" alt="back">
             </a>
-            <p class="text-center m-auto font-semibold">Payment</p>
+            <p class="text-center m-auto font-semibold text-[36px] text-black/80">Payment</p>
             <div class="w-12"></div>
         </nav>
         <form action="{{route('front.book_payment_store', $packageBooking->id)}}" method="POST" enctype="multipart/form-data" class="flex flex-col gap-8">
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div
-                class="navigation-bar fixed bottom-0 z-50 max-w-[640px] w-full h-[85px] bg-black rounded-t-[25px] flex items-center justify-between px-6 shadow-[-6px_-8px_20px_0_#00000008]">
+                class="navigation-bar fixed left-0 right-0 bottom-0 z-50 w-full h-[85px] bg-black rounded-t-[25px] flex items-center justify-between px-6 shadow-[-6px_-8px_20px_0_#00000008]">
                 <div class="flex flex-col justify-center gap-1">
                     <p class="text-white text-sm tracking-035 leading-[22px]">Total Payment</p>
                     <p id="grandtotal" class="text-[#EED202] font-semibold text-lg leading-[26px] tracking-[0.6px]">Rp
@@ -122,7 +122,8 @@
                 </div>
                 <button id="confirm-payment" type="submit"
                     class="p-[16px_24px] rounded-xl bg-blue w-fit disabled:bg-[#BFBFBF] text-white hover:bg-[#06C755] transition-all duration-300"
-                    disabled>Confirm</button>
+                    disabled>Confirm
+                </button>
             </div>
         </form>
     </section>

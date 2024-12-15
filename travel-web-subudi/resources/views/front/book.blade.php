@@ -1,6 +1,6 @@
 @extends('front.layouts.app')
 @section('content')
-    <section id="content" class="max-w-[640px] w-full mx-auto bg-[#F9F2EF] min-h-screen flex flex-col gap-8 pb-[120px]">
+    <section id="content" class="md:px-24 px-6 w-full mx-auto bg-[#F9F2EF] min-h-screen flex flex-col gap-8 pb-[120px]">
         <nav class="mt-8 px-4 w-full flex items-center justify-between">
             <a href="{{route('front.details', $packageTour->slug)}}">
                 <img src="{{asset('assets/icons/back.png')}}" alt="back">
@@ -15,7 +15,7 @@
                 <div
                     class="flex items-center gap-[10px] bg-white p-[16px_24px] rounded-[37px]  transition-all duration-300">
                     <input type="date" name="start_date" id="start_date"
-                        class="appearance-none outline-none w-full relative text-sm tracking-035 leading-[22px] [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:opacity-0">
+                        class="appearance-none outline-none focus:outline-none focus:ring-0 border-none w-full relative text-sm tracking-035 leading-[22px] [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:opacity-0">
                     <div class="w-6 h-6 flex shrink-0">
                         <img src="{{asset('assets/icons/calendar-blue.svg')}}" class="w-full h-full" alt="icon">
                     </div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div
-                class="navigation-bar fixed bottom-0 z-50 max-w-[640px] w-full h-[85px] bg-black rounded-t-[25px] flex items-center justify-between px-6 shadow-[-6px_-8px_20px_0_#00000008]">
+                class="md:px-24 px-6 navigation-bar fixed right-0 left-0 bottom-0 z-50 w-full h-[85px] bg-black rounded-t-[25px] flex items-center justify-between shadow-[-6px_-8px_20px_0_#00000008]">
                 <div class="flex flex-col justify-center gap-1">
                     <p class="text-white text-sm tracking-035 leading-[22px]">Grand Total</p>
                     <p id="grandtotal" class="text-[#EED202] font-semibold text-lg leading-[26px] tracking-[0.6px]"></p>

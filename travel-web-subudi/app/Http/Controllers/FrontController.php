@@ -19,8 +19,8 @@ class FrontController extends Controller
 {
     //
     public function index(){
-        $categories = Category::orderByDesc("id")->get();
-        $package_tours = PackageTour::orderByDesc('id')->take(3)->get();
+        $categories = Category::orderByDesc("id")->paginate(10);
+        $package_tours = PackageTour::orderByDesc('id')->get();
         return view("front.index", compact('package_tours', 'categories'));
     }
 
