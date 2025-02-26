@@ -9,12 +9,13 @@
     @vite('resources/js/app.js')
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body class="font-poppins text-black flex justify-center items-center min-h-screen">
-    {{-- <section id="content" class="max-w-[640px] w-full mx-auto bg-[#F9F2EF] min-h-screen"> --}}
     <div
-        class="max-w-[460px] w-full md:mx-0 mx-5 flex flex-col items-center justify-center px-4 gap-8 border-2 border-slate-200 rounded-[15px] shadow">
+        class="max-w-[460px] w-full md:mx-0 mx-5 flex flex-col items-center justify-center px-4 gap-8 border-2 border-slate-200 rounded-[15px] shadow" data-aos="fade-up">
         <form method="POST" action="{{ route('login') }}"
             class="flex flex-col w-full bg-white p-[24px_16px] gap-8 rounded-[22px] items-center">
             @csrf
@@ -65,6 +66,14 @@
         </form>
     </div>
     {{-- </section> --}}
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // Inisialisasi AOS
+      AOS.init({
+            duration: 800,  // Durasi animasi dalam milidetik
+            easing: 'ease-in-out', // Jenis easing animasi
+        });
+    </script>
 </body>
 
 </html>
