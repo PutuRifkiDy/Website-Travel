@@ -2,7 +2,7 @@
     <div class="flex md:flex-row flex-col justify-between mb-20 w-full">
         <div class="flex flex-col gap-5 md:mb-0 mb-10">
             <p class="text-pink-gradient text-[31.56px] leading-[39.4px] font-poppins font-bold">
-                MadeSubudiBaliTour
+                SubudiTour
             </p>
             <p class="font-poppins text-[15.78px] leading-[29.6px] text-[#6F6C90] w-[300px]">
                 Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
@@ -42,40 +42,28 @@
                 Company
             </p>
             <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90]">
+                Home
+            </p>
+            <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90]">
                 About
             </p>
             <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90]">
-                Contact us
+                Destinations
             </p>
             <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90]">
-                Careers
-            </p>
-            <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90]">
-                Culture
-            </p>
-            <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90]">
-                Blog
+                Contact
             </p>
         </div>
 
         <div class="flex flex-col gap-5 md:mb-0 mb-10">
             <p class="font-poppins font-semibold text-[19.72px] leading-[21.7px] text-[#170F49] mb-5">
-                Support
-            </p>
-            <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90]">
-                Getting started
-            </p>
-            <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90]">
-                Help center
-            </p>
-            <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90]">
-                Server status
+                Services
             </p>
             <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90]">
                 Report a bug
             </p>
             <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90]">
-                Chat support 
+                Chat support
             </p>
         </div>
 
@@ -106,8 +94,7 @@
                     <path d="M7.08841 14.0675C7.08841 14.9647 7.44483 15.8252 8.07925 16.4596C8.71368 17.094 9.57414 17.4505 10.4714 17.4505C11.3686 17.4505 12.229 17.094 12.8635 16.4596C13.4979 15.8252 13.8543 14.9647 13.8543 14.0675C13.8543 13.1703 13.4979 12.3098 12.8635 11.6754C12.229 11.041 11.3686 10.6846 10.4714 10.6846C9.57414 10.6846 8.71368 11.041 8.07925 11.6754C7.44483 12.3098 7.08841 13.1703 7.08841 14.0675V14.0675Z" stroke="#170F49" stroke-width="1.38064" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <p class="font-poppins text-[15.78px] leading-[19.7px] text-[#6F6C90] w-[190px]">
-                    794 Mcallister St
-                    San Francisco, 94102
+                    Indonesia, Provinsi Bali Kecamatan Denpasar Barat
                 </p>
             </div>
         </div>

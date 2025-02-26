@@ -1,10 +1,12 @@
 @extends('front.layouts.app')
 @section('content')
     @include('components.navbar-front')
-    <section id="content" class="flex md:flex-row flex-col-reverse justify-between items-center mt-24">
+    <section id="content" class="flex md:flex-row flex-col-reverse justify-between items-center md:mt-24 mt-36">
 
         <!-- Bagian Teks -->
-        <div id="home" class="flex flex-col md:px-20 px-6 gap-5 md:mt-16 mt-0 md:items-start items-center text-center md:text-left" data-aos="fade-left" >
+        <div id="home"
+            class="flex flex-col md:px-20 px-6 gap-5 md:mt-16 mt-0 md:items-start items-center text-center md:text-left"
+            data-aos="fade-left">
             <div
                 class="flex flex-row gap-5 rounded-[98.62px] w-full md:w-[230.56px] h-[55.23px] justify-center items-center bg-[#FFFFFF] shadow-2xl">
                 <p class="font-poppins font-bold text-[13.81px] leading-[0.12em] text-[#F85E9F]">Explore the Bali!</p>
@@ -38,16 +40,17 @@
                         <div
                             class="rounded-[98.62px] bg-[#FFFFFF] w-full md:w-[186.67px] h-[55.23px] flex justify-center items-center hover:bg-[#FFFFFF]/60 border-[#EEEEEE] border-[1px] border-solid transition-transform duration-200 hover:scale-105 cursor-pointer gap-2 shadow-xl shadow-[#5D50C6]/30">
                             <img src="{{ asset('assets/icons/watch-demo.svg') }}" alt="">
-                            <p class="font-poppins text-[13.81px] leading-[1.2em] font-semibold text-[#222831]">See Package</p>
-                        </button>
-                    </a>
-                </div>
+                            <p class="font-poppins text-[13.81px] leading-[1.2em] font-semibold text-[#222831]">See Package
+                            </p>
+                </button>
+                </a>
             </div>
+        </div>
         </div>
 
         <!-- Bagian Gambar -->
-        <div
-            class="w-full md:w-[900px] md:mt-40 mt-0 md:absolute right-0 md:right-0 md:mr-0 mr-20 overflow-hidden px-6 md:px-0 flex justify-center items-center" data-aos="fade-right">
+        <div class="w-full md:w-[900px] md:mt-40 mt-0 md:absolute right-0 md:right-0 md:mr-0 mr-20 overflow-hidden px-6 md:px-0 flex justify-center items-center"
+            data-aos="fade-right">
             <img src="{{ asset('assets/photos/home-banner.png') }}" class="w-full h-auto md:w-auto" alt="Home Banner">
         </div>
 
@@ -139,7 +142,7 @@
             <div class="flex gap-6 md:gap-9">
                 <button class="geserKeKiri" type="button">
                     <div
-                         class="w-[40px] md:w-[47px] h-[40px] md:h-[47px] rounded-[50%] bg-[#F6F5F5] flex justify-center items-center shadow-md transition-transform duration-200 hover:scale-105 cursor-pointer hover:bg-[#F6F5F5]/50">
+                        class="w-[40px] md:w-[47px] h-[40px] md:h-[47px] rounded-[50%] bg-[#F6F5F5] flex justify-center items-center shadow-md transition-transform duration-200 hover:scale-105 cursor-pointer hover:bg-[#F6F5F5]/50">
                         <svg width="12" height="19" viewBox="0 0 12 19" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.67978 17.2354L2.0449 9.60047L9.67978 1.96559" stroke="#5D50C6"
@@ -164,8 +167,7 @@
 
         <!-- Card Section -->
         <div class="card-container overflow-x-hidden">
-            <div
-                class="card-wrapper flex flex-row gap-3 mt-10 bg-white transition-transform duration-500 mx-0">
+            <div class="card-wrapper flex flex-row gap-3 mt-10 bg-white transition-transform duration-500 mx-0">
                 <!-- Card 1 -->
                 @forelse($package_tours as $tour)
                     <div class="relative rounded-2xl p-5 card">
@@ -234,12 +236,14 @@
     <!-- about page -->
     <div id="about" class="flex md:px-24 px-6 md:flex-row flex-col justify-between items-center gap-10 md:mt-0 mt-20">
 
-        <!-- Bagian Gambar -->
-        <img src="{{ asset('assets/photos/about-page.png') }}" class="w-full md:w-[700.76px] h-auto" alt=""
-            data-aos="fade-up">
+        <div class="md:w-1/2 w-full">
+            <!-- Bagian Gambar -->
+            <img src="{{ asset('assets/photos/about-page.png') }}" class="w-full h-auto" alt=""
+                data-aos="fade-up">
+        </div>
 
         <!-- Bagian Teks dan Statistik -->
-        <div class="flex flex-col justify-center items-center md:items-start mt-10 md:mt-36" data-aos="fade-right">
+        <div class="flex flex-col justify-center items-center md:items-start mt-10 md:mt-36 md:w-1/2 w-full" data-aos="fade-right">
 
             <!-- Teks Utama -->
             <div class="flex flex-col gap-3 text-center md:text-left items-center md:items-start">
@@ -251,17 +255,16 @@
                     class="font-poppins font-semibold text-[32px] md:text-[42.63px] leading-[1.2em] text-[#191825] w-full md:w-[431.11px]">
                     Unlock Your Dream Destination
                 </p>
-                <p
-                    class="font-poppins text-[14px] md:text-[16px] leading-[1.6em] text-[#191825]/75 w-full md:w-[431.11px]">
+                <p class="font-poppins text-[14px] md:text-[16px] leading-[1.6em] text-[#191825]/75 w-full">
                     We are dedicated to making your journey of discovery truly unforgettable. Our team of passionate travel
                     experts is here to assist you in finding the destination of your dreams.
                 </p>
             </div>
 
             <!-- Statistik -->
-            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 w-full">
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-5 w-full">
                 <div
-                    class="flex flex-col gap-2 justify-center items-center text-center border border-[1px] border-solid border-[#191825]/10 p-5 rounded-[31px]">
+                    class="flex flex-col gap-2 justify-center items-center text-center  border-[1px] border-solid border-[#191825]/10 p-5 rounded-[31px]">
                     <p class="font-poppins font-bold text-[28px] md:text-[33.91px] leading-[1.2em] text-[#F85E9F]">
                         4k+
                     </p>
@@ -317,14 +320,14 @@
 
             <div class="flex flex-row md:gap-10 gap-4 justify-center items-center">
 
-            @forelse($categories as $category)
-                <a href="{{route('front.category', $category->slug)}}"
-                    class="link-dns font-poppins font-medium text-[16px] leading-[1.2em] text-[#191825]/50 active">
-                    {{$category->name}}
-                </a>
-            @empty
-            <p>Data Kategori Belum Tersedia</p>
-            @endforelse
+                @forelse($categories as $category)
+                    <a href="{{ route('front.category', $category->slug) }}"
+                        class="link-dns font-poppins font-medium text-[16px] leading-[1.2em] text-[#191825]/50 active">
+                        {{ $category->name }}
+                    </a>
+                @empty
+                    <p>Data Kategori Belum Tersedia</p>
+                @endforelse
                 {{-- <a href="#about" class="link-dns font-poppins font-medium text-[16px] leading-[1.2em] text-[#192825]/50">
                     Montain
                 </a>
@@ -543,7 +546,7 @@
                 <input type="email" placeholder="Enter Your email address"
                     class="w-full py-2 px-4 font-poppins text-[13.81px] leading-[13.8px] text-[#5B5F62] border-none outline-none focus:ring-0 rounded-full md:mx-0 mx-2" />
                 <button
-                    class="w-[40px] h-[40px] bg-[#816AFF] hover:bg-[#816AFF]/60 rounded-[13.81px] shadow-lg shadow-[#816AFF]/40 flex justify-center items-center text-center">
+                    class="bg-[#816AFF] hover:bg-[#816AFF]/60 rounded-[13.81px] shadow-lg shadow-[#816AFF]/40 flex justify-center items-center text-center">
                     <img src="{{ asset('assets/icons/icon-button-newsletter.svg') }}" alt="">
                 </button>
             </div>

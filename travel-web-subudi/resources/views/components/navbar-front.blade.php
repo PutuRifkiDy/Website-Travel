@@ -1,6 +1,6 @@
-<nav x-data="{ open: false }" class="fixed top-0 left-0 w-full z-50 bg-white shadow-md border-b border-gray-100">
+<nav x-data="{ open: false }" class="fixed top-0 left-0 w-full z-50 bg-white shadow border-b border-gray-100">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="px-6 md:px-20 py-8">
         <div class="flex flex-row justify-between gap-8 items-center">
             <!-- Logo -->
             <div>
@@ -13,11 +13,11 @@
 
             <div>
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <a href="/#home" class="text-[#191825]/75 font-medium hover:text-gray-500">{{ __('Home') }}</a>
-                    <a href="/#about" class="text-[#191825]/75 font-medium hover:text-gray-500">{{ __('About') }}</a>
-                    <a href="/#destinations" class="text-[#191825]/75 font-medium hover:text-gray-500">{{ __('Destinations') }}</a>
-                    <a href="/#contact" class="text-[#191825]/75 font-medium hover:text-gray-500">{{ __('Contact') }}</a>
+                <div class="hidden space-x-16 sm:-my-px sm:ms-10 sm:flex">
+                    <a href="/#home" class="text-[#191825]/80 font-medium hover:text-gray-500">{{ __('Home') }}</a>
+                    <a href="/#about" class="text-[#191825]/80 font-medium hover:text-gray-500">{{ __('About') }}</a>
+                    <a href="/#destinations" class="text-[#191825]/80 font-medium hover:text-gray-500">{{ __('Destinations') }}</a>
+                    <a href="/#contact" class="text-[#191825]/80 font-medium hover:text-gray-500">{{ __('Contact') }}</a>
                 </div>
             </div>
 
@@ -46,15 +46,15 @@
                             class="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-md z-50"
                             style="display: none;">
                             <div class="py-1 ">
-                                <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-600">
+                                <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-slate-800">
                                     {{ __('Profile') }}
                                 </a>
-                                <a href="{{ route('dashboard') }}" class="block px-4 py-2 text-sm text-gray-600">
+                                <a href="{{ route('dashboard') }}" class="block px-4 py-2 text-sm text-slate-800">
                                     Dashboard
                                 </a>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    <a href="#" onclick="event.preventDefault(); this.closest('form').submit();" class="w-full text-left block px-4 py-2 text-sm text-gray-600">
+                                    <a href="#" onclick="event.preventDefault(); this.closest('form').submit();" class="w-full text-left block px-4 py-2 text-sm text-slate-800">
                                         {{ __('Log Out') }}
                                     </a>
                                 </form>

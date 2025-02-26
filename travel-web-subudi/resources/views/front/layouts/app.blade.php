@@ -32,7 +32,6 @@
       // Inisialisasi AOS
       AOS.init({
             duration: 800,  // Durasi animasi dalam milidetik
-            delay: 200,      // Delay sebelum animasi dimulai
             easing: 'ease-in-out', // Jenis easing animasi
         });
     </script>
