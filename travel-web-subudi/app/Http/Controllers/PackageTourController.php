@@ -18,7 +18,7 @@ class PackageTourController extends Controller
     public function index()
     {
         //
-        $package_tours = PackageTour::orderByDesc('id')->paginate(10);
+        $package_tours = PackageTour::orderByDesc('id')->get();
         return view('admin.package_tours.index', compact('package_tours'));
     }
 
@@ -43,7 +43,7 @@ class PackageTourController extends Controller
             $validated = $request->validated();
 
             if($request->hasFile('thumbnail')){
-                $thumbnailPath = 
+                $thumbnailPath =
                 $request->file('thumbnail')->store('thumbnails/' . date('Y/m/d'), 'public');
                 $validated['thumbnail'] = $thumbnailPath;
             }
@@ -96,7 +96,7 @@ class PackageTourController extends Controller
             $validated = $request->validated();
 
             if($request->hasFile('thumbnail')){
-                $thumbnailPath = 
+                $thumbnailPath =
                 $request->file('thumbnail')->store('thumbnails/' . date('Y/m/d'), 'public');
                 $validated['thumbnail'] = $thumbnailPath;
             }

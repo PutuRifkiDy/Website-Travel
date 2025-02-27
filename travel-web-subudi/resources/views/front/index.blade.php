@@ -167,8 +167,7 @@
 
         <!-- Card Section -->
         <div class="card-container overflow-x-hidden">
-            <div
-                class="card-wrapper gap-3 mt-10 bg-white transition-transform duration-500 mx-0">
+            <div class="card-wrapper gap-3 mt-10">
                 <!-- Card 1 -->
                 @forelse($package_tours as $tour)
                     <div class="rounded-2xl p-5 card md:w-[340px] w-full">

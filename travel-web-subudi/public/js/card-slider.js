@@ -11,7 +11,7 @@ console.log(totalCards);
 
 // Fungsi untuk menggeser ke kanan
 geserKeKanan.addEventListener('click', function() {
-    if (currentIndex < totalCards - 2) {
+    if (currentIndex < totalCards - 1) {
         currentIndex++;
         cardWrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
