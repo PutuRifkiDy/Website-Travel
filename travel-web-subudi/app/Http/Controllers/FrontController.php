@@ -19,7 +19,7 @@ class FrontController extends Controller
 {
     //
     public function index(){
-        $categories = Category::orderByDesc("id")->paginate(10);
+        $categories = Category::orderByDesc("id")->paginate(5);
         $package_tours = PackageTour::orderByDesc('id')->get();
         return view("front.index", compact('package_tours', 'categories'));
     }
@@ -65,11 +65,11 @@ class FrontController extends Controller
             $validated['insurance'] = $insurance;
             $validated['tax'] = $tax;
             $validated['sub_total'] = $sub_total;
-            $validated['total_amount'] = $sub_total + $tax + $insurance;  
+            $validated['total_amount'] = $sub_total + $tax + $insurance;
 
             $packageBooking = PackageBooking::create($validated);
             $packageBookingId = $packageBooking->id;
- 
+
         });
 
         if($packageBookingId){

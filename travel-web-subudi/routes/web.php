@@ -7,7 +7,9 @@ use App\Http\Controllers\PackageBankController;
 use App\Http\Controllers\PackageBookingController;
 use App\Http\Controllers\PackageTourController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\CountVisitor;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -73,6 +75,7 @@ Route::middleware('auth')->group(function () {
         Route::middleware('can:manage transactions')->group(function () {
             Route::resource('package_bookings', PackageBookingController::class);
         });
+        Route::resource('users', UserController::class);
     });
 
 });

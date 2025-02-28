@@ -206,7 +206,7 @@
             </section>
         @endrole
         @role('customer')
-            <div class="flex flex-wrap gap-3 mt-10">
+            <div class="flex flex-wrap justify-between gap-3 mt-10">
                 <!-- Card 1 -->
                 @forelse($package_tours as $tour)
                     <div class="rounded-2xl p-5 card md:w-[340px] w-full">

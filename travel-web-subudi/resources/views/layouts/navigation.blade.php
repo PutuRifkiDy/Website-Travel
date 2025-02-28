@@ -93,7 +93,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex flex-row gap-x-2 font-semibold text-base text-indigo-950">
+                        <a href="{{ route('admin.users.index') }}" class="flex flex-row gap-x-2 font-semibold text-base text-indigo-950">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -260,7 +260,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="flex flex-row gap-x-2 font-semibold text-base text-indigo-950">
+                                <a href="{{ route('admin.users.index') }}" class="flex flex-row gap-x-2 font-semibold text-base text-indigo-950">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -393,7 +393,7 @@
                 <div class="user flex-row items-center gap-x-3 hidden md:flex">
                     <div>
                         <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
-                            class="text-white bg-blue hover:bg-blue/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            class="text-white bg-indigo-700 hover:bg-blue/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                             type="button">Menu <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
