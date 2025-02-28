@@ -391,23 +391,63 @@
                     </form> --}}
                 </div>
                 <div class="user flex-row items-center gap-x-3 hidden md:flex">
-                    <div class="flex flex-col text-right    ">
-                        <h3 class="text-indigo-950 font-semibold text-base">
-                            {{ auth()->user()->name }}
-                        </h3>
-                        @role('super_admin')
-                            <p class="text-gray-500 text-sm">
-                                Admin
-                            </p>
-                        @endrole
-                        @role('customer')
-                            <p class="text-gray-500 text-sm">
-                                Customer
-                            </p>
-                        @endrole
+                    <div>
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                            class="text-white bg-blue hover:bg-blue/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            type="button">Menu <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-800"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="{{ route('dashboard') }}" class="block px-4 py-2">
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('front.index') }}" class="block px-4 py-2">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <a href="#"
+                                            onclick="event.preventDefault(); this.closest('form').submit();"
+                                            class="w-full text-left block px-4 py-2 text-sm text-red-800">
+                                            {{ __('Log Out') }}
+                                        </a>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1616325629936-99a9013c29c6?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="" class="h-[50px] w-[50px] rounded-full object-cover">
+                    <div class="flex flex-row items-center gap-3">
+                        <div class="flex flex-col text-right    ">
+                            <h3 class="text-indigo-950 font-semibold text-base">
+                                {{ auth()->user()->name }}
+                            </h3>
+                            @role('super_admin')
+                                <p class="text-gray-500 text-sm">
+                                    Admin
+                                </p>
+                            @endrole
+                            @role('customer')
+                                <p class="text-gray-500 text-sm">
+                                    Customer
+                                </p>
+                            @endrole
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1616325629936-99a9013c29c6?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="" class="h-[50px] w-[50px] rounded-full object-cover">
+                    </div>
                 </div>
             </div>
         </div>
