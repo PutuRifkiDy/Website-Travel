@@ -9,7 +9,7 @@
                             {{ __('Manage Categories') }}
                         </h2>
                         <a href="{{ route('admin.categories.create') }}"
-                            class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
+                            class="font-bold py-4 px-6 bg-[#F85E9F] text-white rounded-full">
                             Add New
                         </a>
                     </div>

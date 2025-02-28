@@ -7,7 +7,7 @@
                         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                             {{ __('Edit Tour') }}
                         </h2>
-                    </div>    
+                    </div>
 
                     <form method="POST" action="{{ route('admin.package_tours.update', $packageTour) }}"
                         enctype="multipart/form-data">
@@ -65,7 +65,7 @@
 
                         <div class="mt-4">
                             <x-input-label for="days" :value="__('Days')" />
-                            <x-text-input id="days" class="block mt-1 w-full" type="text" name="days"
+                            <x-text-input id="days" class="block mt-1 w-full" type="number" name="days"
                                 value="{{ $packageTour->days }}" required autofocus autocomplete="days" />
                             <x-input-error :messages="$errors->get('days')" class="mt-2" />
                         </div>
