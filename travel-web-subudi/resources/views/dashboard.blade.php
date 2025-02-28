@@ -11,17 +11,6 @@
                         Lorem dolor reporting easier
                     </p>
                 </div>
-                <div class="flex flex-row gap-x-3">
-
-                    <a href=""
-                        class="md:w-fit w-full text-center px-7 rounded-full text-base py-3 font-semibold text-indigo-950 bg-white">
-                        Filter
-                    </a>
-                    <a href=""
-                        class="md:w-fit w-full text-center px-7 rounded-full text-base py-3 font-semibold text-white bg-violet-700">
-                        Export Data
-                    </a>
-                </div>
             </div>
         </section>
 
@@ -30,8 +19,8 @@
                 Statistics
             </h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-7 gap-y-7">
-                <div class="item-stat bg-white rounded-2xl p-5">
-                    <div class="flex flex-row mb-7 justify-between">
+                <div class="item-start bg-white rounded-2xl p-5">
+                    <div class="flex flex-row justify-between">
                         <div class="bg-violet-700 rounded-full w-fit p-3">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -48,31 +37,24 @@
                             </svg>
 
                         </div>
-                        <div class="flex flex-row gap-x-1 font-semibold items-center text-sm text-red-600">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.5 14.5L12.3 10.3L10.7 12.7L7.5 9.5" stroke="#dc2626" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M14.5 14.5H16.5V12.5" stroke="#dc2626" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
-                                    stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+                        <div class="flex flex-col">
 
+                            @php
+                                $file = storage_path('visitor_count.txt');
+                                $visitorCount = file_exists($file) ? file_get_contents($file) : 0;
+                            @endphp
 
-
-                            183%
+                            <h3 class="text-2xl text-indigo-950 font-bold">
+                                {{ $visitorCount }}
+                            </h3>
+                            <p class="text-sm text-gray-500">
+                                Visitor Count
+                            </p>
                         </div>
                     </div>
-                    <h3 class="text-2xl text-indigo-950 font-bold">
-                        $59,402,199
-                    </h3>
-                    <p class="text-sm text-gray-500">
-                        Teachers Revenue
-                    </p>
                 </div>
-                <div class="item-stat bg-white rounded-2xl p-5">
-                    <div class="flex flex-row mb-7 justify-between">
+                <div class="item-start bg-white rounded-2xl p-5">
+                    <div class="flex flex-row justify-between">
                         <div class="bg-blue-700 rounded-full w-fit p-3">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -96,30 +78,19 @@
 
 
                         </div>
-                        <div class="flex flex-row gap-x-1 font-semibold items-center text-sm text-green-600">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.5 9.5L12.3 13.7L10.7 11.3L7.5 14.5" stroke="#16a34a" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M14.5 9.5H16.5V11.5" stroke="#16a34a" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
-                                    stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+                        <div class="flex flex-col">
 
-
-                            25%
+                            <h3 class="text-2xl text-indigo-950 font-bold">
+                                {{ $category_count }}
+                            </h3>
+                            <p class="text-sm text-gray-500">
+                                Category Tour
+                            </p>
                         </div>
                     </div>
-                    <h3 class="text-2xl text-indigo-950 font-bold">
-                        559,302
-                    </h3>
-                    <p class="text-sm text-gray-500">
-                        Customer Reach
-                    </p>
                 </div>
                 <div class="item-stat bg-white rounded-2xl p-5">
-                    <div class="flex flex-row mb-7 justify-between">
+                    <div class="flex flex-row justify-between">
                         <div class="bg-orange-500 rounded-full w-fit p-3">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -136,30 +107,20 @@
 
 
                         </div>
-                        <div class="flex flex-row gap-x-1 font-semibold items-center text-sm text-green-600">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.5 9.5L12.3 13.7L10.7 11.3L7.5 14.5" stroke="#16a34a" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M14.5 9.5H16.5V11.5" stroke="#16a34a" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
-                                    stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+                        <div class="flex flex-col">
 
-
-                            25%
+                            <h3 class="text-2xl text-indigo-950 font-bold">
+                                {{ $package_booking_count }}
+                            </h3>
+                            <p class="text-sm text-gray-500">
+                                Package Tour
+                            </p>
                         </div>
                     </div>
-                    <h3 class="text-2xl text-indigo-950 font-bold">
-                        189,391
-                    </h3>
-                    <p class="text-sm text-gray-500">
-                        Product Purchased
-                    </p>
                 </div>
-                <div class="item-stat bg-white rounded-2xl p-5">
-                    <div class="flex flex-row mb-7 justify-between">
+
+                <div class="item-start bg-white rounded-2xl p-5">
+                    <div class="flex flex-row justify-between">
                         <div class="bg-cyan-700 rounded-full w-fit p-3">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -179,383 +140,62 @@
 
 
                         </div>
-                        <div class="flex flex-row gap-x-1 font-semibold items-center text-sm text-red-600">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.5 14.5L12.3 10.3L10.7 12.7L7.5 9.5" stroke="#dc2626" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M14.5 14.5H16.5V12.5" stroke="#dc2626" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
-                                    stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+                        <div class="flex flex-col">
 
-
-
-                            183%
+                            <h3 class="text-2xl text-indigo-950 font-bold">
+                                {{ $user_count }}
+                            </h3>
+                            <p class="text-sm text-gray-500">
+                                User Login
+                            </p>
                         </div>
                     </div>
-                    <h3 class="text-2xl text-indigo-950 font-bold">
-                        45,291
-                    </h3>
-                    <p class="text-sm text-gray-500">
-                        Product Categories
-                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="sales pt-10 px-7 grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-7">
+        <section class="sales pt-10 px-7">
             <div class="flex flex-col gap-y-3">
                 <h3 class="text-xl font-semibold text-indigo-950">
-                    Products
+                    Package Tour
                 </h3>
                 <div class="flex flex-col bg-white rounded-2xl p-5">
-                    <table>
-                        <tbody class="flex flex-col gap-y-6">
-                            <tr class="flex flex-row items-center 2xl:justify-start justify-between">
-                                <td class=" flex xl:basis-5/12 flex-row gap-x-3 items-center">
-                                    <a href="#">
-                                        <img class="h-[50px] w-[50px] rounded-2xl object-cover"
-                                            src="https://images.unsplash.com/photo-1614031679232-0dae776a72ee?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            alt="">
-                                    </a>
-                                    <div>
-                                        <a href="#">
-                                            <h3 class="text-indigo-950 font-semibold text-base">
-                                                Jiake Bunny
-                                            </h3>
-                                        </a>
-                                        <p class="text-sm text-gray-500">Clothes</p>
-                                    </div>
-                                </td>
-                                <td class="hidden xl:block">
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        12,390 qty
-                                    </p>
-
-                                </td>
-                                <td>
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        $50,392
-                                    </p>
-
-                                </td>
+                    <table id="export-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <span class="flex items-center">
+                                        Name
+                                    </span>
+                                </th>
+                                <th>
+                                    <span class="flex items-center">
+                                        Location
+                                    </span>
+                                </th>
+                                <th>
+                                    <span class="flex items-center">
+                                        Category
+                                    </span>
+                                </th>
                             </tr>
-                            <tr class="flex flex-row items-center 2xl:justify-start justify-between">
-                                <td class=" flex xl:basis-5/12 flex-row gap-x-3 items-center">
-                                    <a href="#">
-                                        <img class="h-[50px] w-[50px] rounded-2xl object-cover"
-                                            src="https://images.unsplash.com/photo-1614031679232-0dae776a72ee?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            alt="">
-                                    </a>
-                                    <div>
-                                        <a href="#">
-                                            <h3 class="text-indigo-950 font-semibold text-base">
-                                                Jiake Bunny
-                                            </h3>
-                                        </a>
-                                        <p class="text-sm text-gray-500">Clothes</p>
-                                    </div>
-                                </td>
-                                <td class="hidden xl:block">
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        12,390 qty
-                                    </p>
-
-                                </td>
-                                <td>
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        $50,392
-                                    </p>
-
-                                </td>
-                            </tr>
-                            <tr class="flex flex-row items-center 2xl:justify-start justify-between">
-                                <td class=" flex xl:basis-5/12 flex-row gap-x-3 items-center">
-                                    <a href="#">
-                                        <img class="h-[50px] w-[50px] rounded-2xl object-cover"
-                                            src="https://images.unsplash.com/photo-1614031679232-0dae776a72ee?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            alt="">
-                                    </a>
-                                    <div>
-                                        <a href="#">
-                                            <h3 class="text-indigo-950 font-semibold text-base">
-                                                Jiake Bunny
-                                            </h3>
-                                        </a>
-                                        <p class="text-sm text-gray-500">Clothes</p>
-                                    </div>
-                                </td>
-                                <td class="hidden xl:block">
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        12,390 qty
-                                    </p>
-
-                                </td>
-                                <td>
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        $50,392
-                                    </p>
-
-                                </td>
-                            </tr>
-                            <tr class="flex flex-row items-center 2xl:justify-start justify-between">
-                                <td class=" flex xl:basis-5/12 flex-row gap-x-3 items-center">
-                                    <a href="#">
-                                        <img class="h-[50px] w-[50px] rounded-2xl object-cover"
-                                            src="https://images.unsplash.com/photo-1614031679232-0dae776a72ee?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            alt="">
-                                    </a>
-                                    <div>
-                                        <a href="#">
-                                            <h3 class="text-indigo-950 font-semibold text-base">
-                                                Jiake Bunny
-                                            </h3>
-                                        </a>
-                                        <p class="text-sm text-gray-500">Clothes</p>
-                                    </div>
-                                </td>
-                                <td class="hidden xl:block">
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        12,390 qty
-                                    </p>
-
-                                </td>
-                                <td>
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        $50,392
-                                    </p>
-
-                                </td>
-                            </tr>
-                            <tr class="flex flex-row items-center 2xl:justify-start justify-between">
-                                <td class=" flex xl:basis-5/12 flex-row gap-x-3 items-center">
-                                    <a href="#">
-                                        <img class="h-[50px] w-[50px] rounded-2xl object-cover"
-                                            src="https://images.unsplash.com/photo-1614031679232-0dae776a72ee?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            alt="">
-                                    </a>
-                                    <div>
-                                        <a href="#">
-                                            <h3 class="text-indigo-950 font-semibold text-base">
-                                                Jiake Bunny
-                                            </h3>
-                                        </a>
-                                        <p class="text-sm text-gray-500">Clothes</p>
-                                    </div>
-                                </td>
-                                <td class="hidden xl:block">
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        12,390 qty
-                                    </p>
-
-                                </td>
-                                <td>
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        $50,392
-                                    </p>
-
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="flex flex-col gap-y-3">
-                <h3 class="text-xl font-semibold text-indigo-950">
-                    Customers
-                </h3>
-                <div class="flex flex-col bg-white rounded-2xl p-5">
-                    <table>
-                        <tbody class="flex flex-col gap-y-6">
-                            <tr class="flex flex-row items-center 2xl:justify-start justify-between">
-                                <td class=" flex xl:basis-5/12 flex-row gap-x-3 items-center">
-                                    <a href="#">
-                                        <img class="h-[50px] w-[50px] rounded-full object-cover"
-                                            src="https://images.unsplash.com/photo-1514626585111-9aa86183ac98?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            alt="">
-                                    </a>
-                                    <div>
-                                        <a href="#">
-                                            <h3 class="text-indigo-950 font-semibold text-base">
-                                                Mamate Imo
-                                            </h3>
-                                        </a>
-                                        <p class="text-sm text-gray-500">Since 2013</p>
-
-                                    </div>
-                                </td>
-                                <td class="hidden xl:block">
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        1,382 trx
-                                    </p>
-
-                                </td>
-                                <td>
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        $250,392
-                                    </p>
-
-                                </td>
-                            </tr>
-                            <tr class="flex flex-row items-center 2xl:justify-start justify-between">
-                                <td class=" flex xl:basis-5/12 flex-row gap-x-3 items-center">
-                                    <a href="#">
-                                        <img class="h-[50px] w-[50px] rounded-full object-cover"
-                                            src="https://images.unsplash.com/photo-1514626585111-9aa86183ac98?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            alt="">
-                                    </a>
-                                    <div>
-                                        <a href="#">
-                                            <h3 class="text-indigo-950 font-semibold text-base">
-                                                Mamate Imo
-                                            </h3>
-                                        </a>
-                                        <p class="text-sm text-gray-500">Since 2013</p>
-
-                                    </div>
-                                </td>
-                                <td class="hidden xl:block">
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        1,382 trx
-                                    </p>
-
-                                </td>
-                                <td>
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        $250,392
-                                    </p>
-
-                                </td>
-                            </tr>
-                            <tr class="flex flex-row items-center 2xl:justify-start justify-between">
-                                <td class=" flex xl:basis-5/12 flex-row gap-x-3 items-center">
-                                    <a href="#">
-                                        <img class="h-[50px] w-[50px] rounded-full object-cover"
-                                            src="https://images.unsplash.com/photo-1514626585111-9aa86183ac98?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            alt="">
-                                    </a>
-                                    <div>
-                                        <a href="#">
-                                            <h3 class="text-indigo-950 font-semibold text-base">
-                                                Mamate Imo
-                                            </h3>
-                                        </a>
-                                        <p class="text-sm text-gray-500">Since 2013</p>
-
-                                    </div>
-                                </td>
-                                <td class="hidden xl:block">
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        1,382 trx
-                                    </p>
-
-                                </td>
-                                <td>
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        $250,392
-                                    </p>
-
-                                </td>
-                            </tr>
-                            <tr class="flex flex-row items-center 2xl:justify-start justify-between">
-                                <td class=" flex xl:basis-5/12 flex-row gap-x-3 items-center">
-                                    <a href="#">
-                                        <img class="h-[50px] w-[50px] rounded-full object-cover"
-                                            src="https://images.unsplash.com/photo-1514626585111-9aa86183ac98?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            alt="">
-                                    </a>
-                                    <div>
-                                        <a href="#">
-                                            <h3 class="text-indigo-950 font-semibold text-base">
-                                                Mamate Imo
-                                            </h3>
-                                        </a>
-                                        <p class="text-sm text-gray-500">Since 2013</p>
-
-                                    </div>
-                                </td>
-                                <td class="hidden xl:block">
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        1,382 trx
-                                    </p>
-
-                                </td>
-                                <td>
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        $250,392
-                                    </p>
-
-                                </td>
-                            </tr>
-                            <tr class="flex flex-row items-center 2xl:justify-start justify-between">
-                                <td class=" flex xl:basis-5/12 flex-row gap-x-3 items-center">
-                                    <a href="#">
-                                        <img class="h-[50px] w-[50px] rounded-full object-cover"
-                                            src="https://images.unsplash.com/photo-1514626585111-9aa86183ac98?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            alt="">
-                                    </a>
-                                    <div>
-                                        <a href="#">
-                                            <h3 class="text-indigo-950 font-semibold text-base">
-                                                Mamate Imo
-                                            </h3>
-                                        </a>
-                                        <p class="text-sm text-gray-500">Since 2013</p>
-
-                                    </div>
-                                </td>
-                                <td class="hidden xl:block">
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        1,382 trx
-                                    </p>
-
-                                </td>
-                                <td>
-                                    <p class="text-indigo-950 font-semibold text-sm">
-                                        $250,392
-                                    </p>
-
-                                </td>
-                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($package_tours as $package_tour)
+                                <tr>
+                                    <td>{{ $package_tour->name }}</td>
+                                    <td>{{ $package_tour->location }}</td>
+                                    <td>{{ $package_tour->category->name }}</td>
+                                </tr>
+                            @empty
+                                <p>Data tidak ditemukan</p>
+                            @endforelse
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
 
-        <section class="sales pt-10 px-7 grid grid-cols-1 md:grid-cols-2 gap-x-7 pb-10 gap-y-7">
-            <div class="flex flex-col gap-y-3">
-                <h3 class="text-xl font-semibold text-indigo-950">
-                    Products
-                </h3>
-                <div class="h-[400px] flex flex-col bg-white rounded-2xl p-5 text-center justify-center items-center">
-                    <img class="h-[120px] w-[120px] rounded-3xl object-cover mb-7 bg-slate-100" src=""
-                        alt="">
-                    <h3 class="text-xl font-semibold text-indigo-950 mb-2">
-                        Data Not Available
-                    </h3>
-                    <p class="text-gray-500 text-base leading-relaxed">
-                        Currently you have no latest report, <br> please come back later.
-                    </p>
-                </div>
-            </div>
-            <div class="flex flex-col gap-y-3">
-                <h3 class="text-xl font-semibold text-indigo-950">
-                    Customers
-                </h3>
-                <div class="h-[400px] flex flex-col bg-white rounded-2xl p-5 text-center justify-center items-center">
-                    <img class="h-[120px] w-[120px] rounded-3xl object-cover mb-7 bg-slate-100" src=""
-                        alt="">
-                    <h3 class="text-xl font-semibold text-indigo-950 mb-2">
-                        Data Not Available
-                    </h3>
-                    <p class="text-gray-500 text-base leading-relaxed">
-                        Currently you have no latest report, <br> please come back later.
-                    </p>
-                </div>
-            </div>
-        </section>
+
     @endsection
 </x-app-layout>

@@ -18,11 +18,11 @@ export default {
       theme: {
         extend: {
           fontFamily: {
-            poppins: ['Poppins', 'sans-serif'], 
-            inter: ['Inter', 'sans-serif'],     
+            poppins: ['Poppins', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
           },
           colors: {
-            'blue': '#0083B0', 
+            'blue': '#0083B0',
             'pink': '#DB009E',
             'purple-gradient': '#5D50C6',
             'pink-gradient': '#F85E9F',
