@@ -70,7 +70,7 @@
                 }
                 const table = new simpleDatatables.DataTable("#export-table", {
                     template: (options, dom) => "<div class='" + options.classes.top + "'>" +
-                        "<div class='flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-3 rtl:space-x-reverse w-full sm:w-auto'>" +
+                        "<div class='flex flex-col md:flex-row justify-between md:items-center space-y-4 md:space-x-3 rtl:space-x-reverse w-full'>" +
                         (options.paging && options.perPageSelect ?
                             "<div class='" + options.classes.dropdown + "'>" +
                             "<label>" +
