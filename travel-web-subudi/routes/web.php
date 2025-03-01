@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\PackageBankController;
 use App\Http\Controllers\PackageBookingController;
 use App\Http\Controllers\PackageTourController;
@@ -15,6 +16,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
+Route::resource('newsletter', NewsLetterController::class)->middleware('auth');
 Route::get('/category/{category:slug}', [FrontController::class, 'category'])->name('front.category');
 Route::get('/details/{packageTour:slug}', [FrontController::class, 'details'])->name('front.details');
 

@@ -1,7 +1,19 @@
 @extends('front.layouts.app')
 @section('content')
     @include('components.navbar-front')
-    <section id="content" class="flex md:flex-row flex-col-reverse justify-between items-center md:mt-24 mt-36">
+    <section id="content" class="flex md:flex-row flex-col-reverse justify-between items-center md:mt-24 mt-36 relative">
+        @if (session('success'))
+            <div id="toast-simple"
+                class="absolute top-5 right-0 left-24 w-full max-w-xs p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow-sm dark:text-gray-400 dark:divide-gray-700 dark:bg-gray-800 z-50"
+                role="alert">
+                <svg class="w-5 h-5 text-blue-600 dark:text-blue-500 rotate-45" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9" />
+                </svg>
+                <div class="ps-4 text-sm font-normal">{{ session('success') }}</div>
+            </div>
+        @endif
 
         <!-- Bagian Teks -->
         <div id="home"
@@ -221,7 +233,8 @@
                                     </div>
 
                                     <a href="{{ route('front.details', $tour->slug) }}"
-                                        class="font-poppins text-[13.49px] font-medium leading-[1.8em] tracking-[-0.01em] text-[#FFFFFF] bg-[#7723FE] px-6 py-3 rounded-[43.38px] shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">Chat Now</a>
+                                        class="font-poppins text-[13.49px] font-medium leading-[1.8em] tracking-[-0.01em] text-[#FFFFFF] bg-[#7723FE] px-6 py-3 rounded-[43.38px] shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">Chat
+                                        Now</a>
                                 </div>
 
                             </div>
@@ -547,14 +560,17 @@
                 <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 md:w-[400px] w-full">
                     Stay updated with our latest news and offers. Join our newsletter now! </p>
             </div>
-            <div class="flex items-center bg-white rounded-[11.83px] shadow-lg p-2 w-full md:w-[443.78px] h-[59.17px]">
-                <input type="email" placeholder="Enter Your email address"
-                    class="w-full py-2 px-4 font-poppins text-[13.81px] leading-[13.8px] text-[#5B5F62] border-none outline-none focus:ring-0 rounded-full md:mx-0 mx-2" />
-                <button
-                    class="bg-[#816AFF] hover:bg-[#816AFF]/60 rounded-[13.81px] shadow-lg shadow-[#816AFF]/40 flex justify-center items-center text-center">
-                    <img src="{{ asset('assets/icons/icon-button-newsletter.svg') }}" alt="">
-                </button>
-            </div>
+            <form action="{{ route('newsletter.store') }}" method="POST">
+                @csrf
+                <div class="flex items-center bg-white rounded-[11.83px] shadow-lg p-2 w-full md:w-[443.78px] h-[59.17px]">
+                    <input type="email" placeholder="Enter Your email address" name="email"
+                        class="w-full py-2 px-4 font-poppins text-[13.81px] leading-[13.8px] text-[#5B5F62] border-none outline-none focus:ring-0 rounded-full md:mx-0 mx-2" />
+                    <button
+                        class="bg-[#816AFF] hover:bg-[#816AFF]/60 rounded-[13.81px] shadow-lg shadow-[#816AFF]/40 flex justify-center items-center text-center">
+                        <img src="{{ asset('assets/icons/icon-button-newsletter.svg') }}" alt="">
+                    </button>
+                </div>
+            </form>
             <div class="absolute md:block hidden left-2 top-0">
                 <img src="{{ asset('assets/icons/pesawat-newsletter.svg') }}" alt="">
             </div>
