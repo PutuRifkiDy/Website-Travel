@@ -9,8 +9,8 @@
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden p-10 shadow-sm sm:rounded-lg">
 
-                 
-                
+
+
                 <form method="POST" action="{{route('admin.package_banks.store')}} " enctype="multipart/form-data">
                     @csrf
 
@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="flex items-center justify-end mt-4">
-            
+
                         <button type="submit" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
                             Add New Bank
                         </button>

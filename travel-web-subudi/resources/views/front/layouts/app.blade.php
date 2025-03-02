@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3/dist/style.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <title>{{ config('app.name') }} - @yield('title')</title>
 
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
@@ -24,6 +25,7 @@
 
 <body class="font-poppins text-black">
     @yield('content')
+
 
     @stack('before-scripts')
 

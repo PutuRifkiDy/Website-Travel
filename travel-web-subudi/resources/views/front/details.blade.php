@@ -1,5 +1,6 @@
 @extends('front.layouts.app')
 @section('content')
+    @section('title', 'Details')
     <section id="content" class="md:px-24 px-6 w-full mx-auto bg-[#F9F2EF] min-h-screen flex flex-col gap-8 pb-[120px]">
         <nav class="mt-8 px-4 w-full flex items-center justify-between">
             <a href="{{ route('front.index') }}">

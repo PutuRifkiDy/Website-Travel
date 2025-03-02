@@ -1,5 +1,6 @@
 <x-app-layout>
     @section('content-dashboard')
+    @section('title', 'Categories')
         <div class="py-12">
             <div class="md:max-w-7xl max-w-full mx-auto sm:px-6 lg:px-8">
 

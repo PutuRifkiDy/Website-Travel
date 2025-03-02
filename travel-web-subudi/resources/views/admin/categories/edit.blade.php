@@ -1,5 +1,6 @@
 <x-app-layout>
     @section('content-dashboard')
+    @section('title', 'Edit Category')
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('Edit Category') }}
