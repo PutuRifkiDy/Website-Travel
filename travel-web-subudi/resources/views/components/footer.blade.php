@@ -5,7 +5,7 @@
                 SubudiTour
             </p>
             <p class="font-poppins text-[15.78px] leading-[29.6px] text-[#6F6C90] w-[300px]">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
+                Subudi Bali Tour offers unforgettable travel experiences in Bali, providing personalized tours, cultural adventures, and breathtaking sightseeing.
             </p>
             <div class="flex flex-row gap-5 items-center">
                 <a href=""><img src="{{asset('assets/icons/icon-facebook.svg')}}" alt=""></a>
