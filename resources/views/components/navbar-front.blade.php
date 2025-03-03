@@ -92,7 +92,7 @@
 
             @if(Auth::check()) <!-- If User Logged In -->
                 <a href="{{ route('profile.edit') }}" class="block py-2 px-3 text-base font-medium text-gray-800">{{ __('Profile') }}</a>
-                <a href="{{ route('dashboard') }}" class="block py-2 px-3 text-base font-medium text-gray-800">Dashboard') }}</a>
+                <a href="{{ route('dashboard') }}" class="block py-2 px-3 text-base font-medium text-gray-800">Dashboard</a>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <a href="#" onclick="event.preventDefault(); this.closest('form').submit();" class="block py-2 px-3 text-base font-medium text-gray-800">{{ __('Log Out') }}</a>
