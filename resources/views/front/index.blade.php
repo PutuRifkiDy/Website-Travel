@@ -5,7 +5,7 @@
 <section id="content" class="flex md:flex-row flex-col-reverse justify-between items-center md:mt-24 mt-36 relative">
     @if (session('success'))
         <div id="toast-simple"
-            class="absolute top-5 right-0 md:left-24 left-12 w-full max-w-xs p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow-sm dark:text-gray-400 dark:divide-gray-700 dark:bg-gray-800 z-50"
+            class="absolute top-5 right-0 md:left-24 left-0 w-full max-w-xs p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow-sm dark:text-gray-400 dark:divide-gray-700 dark:bg-gray-800 z-50"
             role="alert">
             <svg class="w-5 h-5 text-blue-600 dark:text-blue-500 rotate-45" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
@@ -62,7 +62,7 @@
     </div>
 
     <!-- Bagian Gambar -->
-    <div class="w-full md:w-[900px] md:mt-40 mt-0 md:absolute right-0 md:right-0 overflow-hidden px-6 md:px-0 flex justify-center items-center"
+    <div class="w-max-full md:w-[900px] md:mt-40 mt-0 md:absolute right-0 md:right-0 overflow-hidden px-6 md:px-0 flex justify-center items-center"
         data-aos="fade-right">
         <img src="{{ asset('assets/photos/home-banner.png') }}" class="w-full h-auto md:w-auto" alt="Home Banner">
     </div>
