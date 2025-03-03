@@ -62,7 +62,7 @@
     </div>
 
     <!-- Bagian Gambar -->
-    <div class="w-max-full md:w-[900px] md:mt-40 mt-0 px-0 flex justify-center items-center"
+    <div class="w-max-full md:w-[900px] md:mt-40 mt-0 md:absolute md:right-0 overflow-x-hidden px-0 flex justify-center items-center"
         data-aos="fade-right">
         <img src="{{ asset('assets/photos/home-banner.png') }}" class="w-full h-auto md:w-auto" alt="Home Banner">
     </div>
