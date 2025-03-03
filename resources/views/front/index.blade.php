@@ -2,7 +2,7 @@
 @section('content')
 @section('title', 'Home')
 @include('components.navbar-front')
-<section id="content" class="flex md:flex-row flex-col-reverse justify-between items-center md:mt-24 mt-36 relative overflow-hidden">
+<section id="content" class="flex md:flex-row flex-col-reverse justify-between items-center md:mt-24 mt-36 relative md:overflow-x-visible overflow-x-hidden">
     @if (session('success'))
         <div id="toast-simple"
             class="absolute top-5 right-0 md:left-24 left-0 w-full max-w-xs p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow-sm dark:text-gray-400 dark:divide-gray-700 dark:bg-gray-800 z-50"
@@ -51,7 +51,7 @@
             <button data-modal-target="videoModal" data-modal-toggle="videoModal">
                 <a href="#choose">
                     <div
-                        class="rounded-[98.62px] bg-[#FFFFFF] w-full md:w-[186.67px] h-[55.23px] flex justify-center items-center hover:bg-[#FFFFFF]/60 border-[#EEEEEE] border-[1px] border-solid transition-transform duration-200 hover:scale-105 cursor-pointer gap-2 shadow-xl shadow-[#5D50C6]/30">
+                        class="rounded-[98.62px] bg-[#FFFFFF] w-full md:w-[186.67px] h-[55.23px] flex justify-center items-center hover:bg-[#FFFFFF]/60 border-[#EEEEEE] border-[1px] border-solid transition-transform duration-200 hover:scale-105 cursor-pointer gap-2 shadow-md shadow-[#5D50C6]/30">
                         <img src="{{ asset('assets/icons/watch-demo.svg') }}" alt="">
                         <p class="font-poppins text-[13.81px] leading-[1.2em] font-semibold text-[#222831]">See Package
                         </p>
@@ -62,7 +62,7 @@
     </div>
 
     <!-- Bagian Gambar -->
-    <div class="md:w-[900px] md:mt-40 mt-0 md:absolute md:right-0 overflow-x-hidden px-0 flex justify-center items-center"
+    <div class="w-full md:w-[900px] md:mt-40 mt-0 md:absolute md:mr-0 mr-20 right-0 md:right-0 overflow-x-hidden px-6 md:px-0 flex justify-center items-center"
         data-aos="fade-right">
         <img src="{{ asset('assets/photos/home-banner.png') }}" class="w-full h-auto md:w-auto" alt="Home Banner">
     </div>
